@@ -1,2 +1,2 @@
 # module-eks-aws
-OpenCloudCX empty EJS module
+OpenCloudCX empty EKS module
