@@ -1,3 +1,5 @@
+# Developed by RIVA Solutions Inc 2022.  Authorized Use Only
+
 ## Documentation for eks module is at https://github.com/terraform-aws-modules/terraform-aws-vpc
 
 module "vpc" {
