@@ -3,6 +3,7 @@
 ## Documentation for eks module is at https://github.com/terraform-aws-modules/terraform-aws-vpc
 
 module "vpc" {
+  count   = (var.create_vpc ? 1 : 0)
   source  = "terraform-aws-modules/vpc/aws"
   version = "~> 3.0"
 

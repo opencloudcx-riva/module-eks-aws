@@ -43,7 +43,7 @@ resource "helm_release" "ingress-controller" {
 # resource "helm_release" "k8s_dashboard" {
 #   name             = "k8s-dashboard"
 #   chart            = "kubernetes-dashboard"
-#   namespace        = "spinnaker"
+#   namespace        = "util"
 #   repository       = var.k8s_dashboard_helm_repo
 #   timeout          = var.helm_timeout
 #   version          = var.k8s_dashboard_helm_chart_version
@@ -80,7 +80,7 @@ resource "helm_release" "ingress-controller" {
 # resource "helm_release" "prometheus" {
 #   name             = "prometheus"
 #   chart            = "prometheus"
-#   namespace        = "opencloudcx"
+#   namespace        = "util"
 #   repository       = var.prometheus_helm_repo
 #   timeout          = var.helm_timeout
 #   version          = var.prometheus_helm_chart_version
@@ -99,7 +99,7 @@ resource "helm_release" "ingress-controller" {
 
 #   depends_on = [
 #     module.eks,
-#     kubernetes_namespace.opencloudcx,
+#     # kubernetes_namespace.opencloudcx,
 #   ]
 
 # }

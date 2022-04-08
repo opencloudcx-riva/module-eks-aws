@@ -17,5 +17,5 @@ output "aws_eks_cluster" {
 }
 
 output "vpc_id" {
-  value = module.vpc.vpc_id
+  value = (var.create_vpc ? module.vpc[0].vpc_id : var.vpc_id)
 }

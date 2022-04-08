@@ -9,6 +9,15 @@ variable "stack" {
   default = "dev"
 }
 
+variable "vpc_id" {
+  type = string
+}
+
+variable "create_vpc" {
+  type    = bool
+  default = true
+}
+
 variable "cluster_version" {
   type = string
 }
@@ -83,17 +92,17 @@ variable "write_kubeconfig" {
 
 variable "private_subnets" {
   type    = list(string)
-  default = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+  default = ["10.10.1.0/24", "10.10.2.0/24", "10.10.3.0/24"]
 }
 
 variable "public_subnets" {
   type    = list(string)
-  default = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
+  default = ["10.10.4.0/24", "10.10.5.0/24", "10.10.6.0/24"]
 }
 
 variable "cidr" {
   type    = string
-  default = "10.0.0.0/16"
+  default = "10.10.0.0/16"
 }
 
 # variable "aws_certificate_arn" {
