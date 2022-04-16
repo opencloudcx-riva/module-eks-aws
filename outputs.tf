@@ -16,6 +16,6 @@ output "aws_eks_cluster" {
   value = data.aws_eks_cluster.cluster
 }
 
-output "vpc_id" {
-  value = (var.create_vpc ? module.vpc[0].vpc_id : var.vpc_id)
+output "stack" {
+  value = var.stack
 }
