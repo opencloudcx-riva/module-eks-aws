@@ -24,19 +24,28 @@ module "eks" {
   eks_managed_node_group_defaults = {
     ami_type                   = "AL2_x86_64"
     disk_size                  = 50
-    instance_types             = ["m5.large"]
+    instance_types             = ["m5.xlarge"]
     iam_role_attach_cni_policy = true
   }
 
   eks_managed_node_groups = {
+    # ocx_default = {
+
+    #   create_launch_template = false
+    #   launch_template_name   = ""
+
+    #   min_size     = 3
+    #   max_size     = 5
+    #   desired_size = 3
+    # }
+
     bottlerocket_default = {
       create_launch_template = false
       launch_template_name   = ""
 
-      # asg_desired_capacity = 3
-      # min_size     = 3
-      # max_size     = 5
-      # desired_size = 3
+      min_size     = 1
+      max_size     = 7
+      desired_size = 3
 
       ami_type = "BOTTLEROCKET_x86_64"
       platform = "bottlerocket"
